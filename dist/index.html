@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tap Test</title>
+        <script defer src="./js/main.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <link href="https://unpkg.com/video.js@7/dist/video-js.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+    <body>
+        <div class="root">
+            <video class="video-js vjs-custom-theme" preload="auto" id="video" data-setup="{}" controls autoplay muted>
+                <source src="./videos/video1.mp4" type="video/mp4" />
+            </video>
+            <div class="left">
+                <svg class="left-scale" height="70%" viewBox="0 0 34 280" fill="none" xmlns="http://www.w3.org/2000/svg" stroke-opacity="1">
+                    <path
+                        class="left-scale__path"
+                        d="M26.4609 0.500916C26.4609 0.500916 1.0154 72.1433 1.0154 142.755C1.0154 211.363 26.4609 278.998 26.4609 278.998"
+                        stroke="white"
+                        stroke-width="2"
+                    />
+                </svg>
+                <img class="left-shadow" src="./images/left-shadow.png" alt="left-shadow" />
+                <span class="percentage left-percentage"></span>
+            </div>
+            <div class="right">
+                <svg class="right-scale" height="70%" viewBox="0 0 34 280" fill="none" xmlns="http://www.w3.org/2000/svg" stroke-opacity="1">
+                    <path
+                        class="right-scale__path"
+                        d="M1.02612 0.500916C1.02612 0.500916 32.7347 72.1433 32.7347 142.755C32.7347 211.363 1.02612 278.998 1.02612 278.998"
+                        stroke="white"
+                        stroke-width="2"
+                    />
+                </svg>
+                <img class="right-shadow" src="./images/right-shadow.png" alt="right-shadow" />
+                <span class="percentage right-percentage"></span>
+            </div>
+        </div>
+        <script src="https://vjs.zencdn.net/7.19.2/video.min.js"></script>
+    </body>
+</html>

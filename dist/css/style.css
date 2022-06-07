@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+}
+.vjs-control-bar {
+    display: none !important;
+}
+#video {
+    width: 100%;
+    height: 99vh;
+    position: relative;
+}
+.vjs-big-play-button,
+.video-play__button {
+    display: block !important;
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0 ;
+    margin: auto !important;
+    border: none !important;
+}
+.left-scale {
+    height: 750px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -375px;
+    margin-left: 90px;
+}
+.left-scale__path,
+.right-scale__path {
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-name: line;
+    animation-delay: 0s;
+}
+@keyframes line {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+.left-shadow {
+    height: 750px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -375px;
+    margin-left: 100px;
+}
+.right-scale {
+    height: 750px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -375px;
+    margin-right: 90px;
+}
+.right-shadow {
+    height: 750px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -375px;
+    margin-right: 100px;
+}
+.right-percentage {
+    height: 40px;
+    right: 200px;
+    top: 50%;
+    margin-top: -20px;
+    position: absolute;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-size: 36px;
+}
+.left-percentage {
+    height: 40px;
+    left: 200px;
+    top: 50%;
+    margin-top: -20px;
+    position: absolute;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-size: 36px;
+}
