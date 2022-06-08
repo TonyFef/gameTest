@@ -6,7 +6,7 @@ body {
 }
 #video {
     width: 100%;
-    height: 99vh;
+    height: 100vh;
     position: relative;
 }
 .vjs-big-play-button,
@@ -27,21 +27,21 @@ body {
     top: 10%;
     margin-left: 90px;
 }
-.left-scale__path,
-.right-scale__path {
+.right-scale__path,
+.left-scale__path {
+    animation: line;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
-    animation-name: line;
-    /* animation-iteration-count: 0; */
-    /* animation-delay: 2s; */
+    animation-direction: normal;
+    animation-iteration-count: 1;
 }
 @keyframes line {
-    0%  {
-        /* stroke-dasharray: 0; */
-    }
     100% {
         stroke-dashoffset: 0;
-        /* stroke-dasharray: 0; */
+    }
+    0%{
+        stroke-dashoffset: 283;
+        stroke-dasharray: 283;
     }
 }
 .left-shadow {
@@ -86,12 +86,14 @@ body {
     font-size: 36px;
 }
 .modal {
-    top: 40%;
-    right: 40%;
+    top: 45%;
+    right: 45%;
+    text-align: center;
 }
 .modal-content {
     background-color: black;
     color: white;
+    font-size: 48px;
 }
 .overlay {
     display: none;

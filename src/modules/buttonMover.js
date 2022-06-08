@@ -1,34 +1,30 @@
-import { animate } from "../modules/helpers";
+import { animate, getRandom } from "../modules/helpers";
 
 export const buttonMover = (duration) => {
     const button = document.querySelector(".vjs-big-play-button");
-    // console.log(button);
 
-    // console.log(duration);
+    const windowWidthUsable = window.outerWidth * 0.6;
+    const windowHeightUsable = window.outerHeight * 0.8;
 
-    // setTimeout(() => {
-    //     const rightString = button.style.bottom.toString();
-    //     const rightNumber = rightString.substring(0, rightString.length - 2);
-    //     console.log(rightNumber);
-    // }, 3000);
+    let buttonMovingInterval = setInterval(() => {
+        animate({
+            duration: duration,
+            timing(timeFraction) {
+                return timeFraction;
+            },
+            draw: function (progress) {
+                button.style.top = getRandom(-windowHeightUsable, windowHeightUsable) * progress + "px";
+                button.style.left = getRandom(-windowWidthUsable, windowWidthUsable) * progress + "px";
+            },
+        });
+    }, 1250);
 
-    // animate({
-    //     duration: duration * 1000,
-    //     timing(timeFraction) {
-    //         return timeFraction;
-    //     },
-    //     draw(progress) {
-    //         const string = button.style.right.toString();
-    //         const rightNumber = string.substring(0, string.length - 2);
-
-    //         if (rightNumber < 1200) {
-    //             button.style.right = progress * 1000 + "px";
-    //             button.style.bottom = progress * 1000 + "px";
-    //         }
-    //         // if (button.style.right < "1200px") {
-    //         //     button.style.right = progress * 5000 + "px";
-    //         // }
-    //         // console.log(button.style.right);
-    //     },
-    // });
+    button.addEventListener(
+        "click",
+        () => {
+            clearInterval(buttonMovingInterval);
+            console.log("hello");
+        },
+        { once: true }
+    );
 };

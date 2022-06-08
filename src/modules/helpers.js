@@ -4,7 +4,7 @@ export const animate = ({ timing, draw, duration }) => {
     requestAnimationFrame(function animate(time) {
         let timeFraction = (time - start) / duration;
         if (timeFraction > 1) timeFraction = 1;
-        
+
         let progress = timing(timeFraction);
         draw(progress);
 
@@ -12,4 +12,9 @@ export const animate = ({ timing, draw, duration }) => {
             requestAnimationFrame(animate);
         }
     });
+};
+
+export const getRandom = (min, max) => {
+    const index = parseInt(Math.random() * (max - min + 1)) + min;
+    return index;
 };

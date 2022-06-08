@@ -5,7 +5,7 @@ export const videoPlay = (duration) => {
     const leftScale = document.getElementById("left-scale__path");
     const rightScale = document.querySelector(".right-scale__path");
 
-    length = leftScale.getTotalLength();
+    let length = leftScale.getTotalLength();
 
     leftScale.style.animationDuration = `${duration.toFixed(2)}s`;
     rightScale.style.animationDuration = `${duration.toFixed(2)}s`;

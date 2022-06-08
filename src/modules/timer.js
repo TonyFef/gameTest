@@ -1,15 +1,8 @@
 import { animate } from "./helpers";
-// import { modal } from "./modal";
 
 export const timer = (duration) => {
     const text = document.querySelectorAll(".percentage");
-    // const video = document.querySelector(".vjs-tech");
-    // console.log(duration);
-
-    // video.addEventListener("ended", () => {
-    //     console.log("hello");
-    // });
-    const leftScale = document.querySelector(".left-scale__path");
+    const leftScale = document.getElementById("left-scale__path");
     const rightScale = document.querySelector(".right-scale__path");
 
     animate({
@@ -20,13 +13,12 @@ export const timer = (duration) => {
         draw(progress) {
             const percentsRemain = Math.round(100 - progress * 100);
             text.forEach((item) => {
-                item.textContent = percentsRemain;
-                // leftScale.fill = progress;
-                if (percentsRemain < 1) {
-                    // modal();
-                    // video.stop();
+                if (percentsRemain < 30) {
+                    item.style.color = "red";
+                    leftScale.style.stroke = "red";
+                    rightScale.style.stroke = "red";
                 }
-                // console.log(Math.round(100 - progress * 100));
+                item.textContent = percentsRemain;
             });
         },
     });

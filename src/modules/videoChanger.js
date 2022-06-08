@@ -6,13 +6,11 @@ export const videoChanger = () => {
     const video = document.querySelector(".vjs-tech");
 
     video.addEventListener("loadedmetadata", () => {
-        duration = video.duration;
         videoPlay(video.duration);
     });
 
     button.addEventListener("click", () => {
         video.src = `./videos/video${counter}.mp4`;
-       
         counter++;
         counter > 5 ? (counter = 1) : null;
     });
