@@ -1,28 +1,21 @@
 import { timer } from "./timer";
 import { buttonMover } from "./buttonMover";
 
-export const videoPlay = () => {
-    const leftScale = document.querySelector(".left-scale__path");
+export const videoPlay = (duration) => {
+    const leftScale = document.getElementById("left-scale__path");
     const rightScale = document.querySelector(".right-scale__path");
-    const video = document.querySelector(".vjs-tech");
 
-    const duration = video.duration;
-    const length = leftScale.getTotalLength();
-    const currentTime = video.currentTime;
+    length = leftScale.getTotalLength();
 
-    if (currentTime > 0) {
-        leftScale.style.animationDuration = `${duration}s`;
-        rightScale.style.animationDuration = `${duration}s`;
+    leftScale.style.animationDuration = `${duration.toFixed(2)}s`;
+    rightScale.style.animationDuration = `${duration.toFixed(2)}s`;
 
-        leftScale.style.strokeDasharray = length;
-        rightScale.style.strokeDasharray = length;
+    leftScale.setAttribute("stroke-dasharray", length);
+    leftScale.setAttribute("stroke-dashoffset", length);
 
-        leftScale.style.strokeDashoffset = length;
-        rightScale.style.strokeDashoffset = length;
+    rightScale.style.strokeDasharray = length;
+    rightScale.style.strokeDashoffset = length;
 
-        timer(duration);
-    }
-    timer(duration);
-    buttonMover(duration)
-
+    timer(duration.toFixed(2));
+    buttonMover(duration);
 };

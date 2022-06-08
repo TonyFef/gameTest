@@ -1,7 +1,11 @@
-import firstModule from "./modules/firstModule";
-import { videoPlay } from "./modules/videoPlay";
+import playButtonStyler from "./modules/playButtonStyler";
+// import { videoPlay } from "./modules/videoPlay";
+import { videoChanger } from "./modules/videoChanger";
+import { modalShower } from "./modules/modalShower";
 // import { buttonMover } from "./modules/buttonMover";
 
-firstModule();
-videoPlay();
+playButtonStyler();
+// videoPlay();
+videoChanger();
+modalShower();
 // buttonMover();

@@ -16,16 +16,15 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0 ;
+    bottom: 0;
     margin: auto !important;
     border: none !important;
 }
 .left-scale {
-    height: 750px;
+    height: 75vh;
     position: absolute;
     left: 0;
-    top: 50%;
-    margin-top: -375px;
+    top: 10%;
     margin-left: 90px;
 }
 .left-scale__path,
@@ -33,35 +32,37 @@ body {
     animation-timing-function: linear;
     animation-fill-mode: forwards;
     animation-name: line;
-    animation-delay: 0s;
+    /* animation-iteration-count: 0; */
+    /* animation-delay: 2s; */
 }
 @keyframes line {
+    0%  {
+        /* stroke-dasharray: 0; */
+    }
     100% {
         stroke-dashoffset: 0;
+        /* stroke-dasharray: 0; */
     }
 }
 .left-shadow {
-    height: 750px;
+    height: 75vh;
     position: absolute;
     left: 0;
-    top: 50%;
-    margin-top: -375px;
+    top: 10%;
     margin-left: 100px;
 }
 .right-scale {
-    height: 750px;
+    height: 75vh;
     position: absolute;
     right: 0;
-    top: 50%;
-    margin-top: -375px;
+    top: 10%;
     margin-right: 90px;
 }
 .right-shadow {
-    height: 750px;
+    height: 75vh;
     position: absolute;
     right: 0;
-    top: 50%;
-    margin-top: -375px;
+    top: 10%;
     margin-right: 100px;
 }
 .right-percentage {
@@ -83,4 +84,24 @@ body {
     color: white;
     font-family: "Open Sans", sans-serif;
     font-size: 36px;
+}
+.modal {
+    top: 40%;
+    right: 40%;
+}
+.modal-content {
+    background-color: black;
+    color: white;
+}
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 1);
+    z-index: 2;
 }
