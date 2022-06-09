@@ -39,7 +39,7 @@ body {
     100% {
         stroke-dashoffset: 0;
     }
-    0%{
+    0% {
         stroke-dashoffset: 283;
         stroke-dasharray: 283;
     }
@@ -106,4 +106,77 @@ body {
     width: 100%;
     background-color: rgba(0, 0, 0, 1);
     z-index: 2;
+}
+@media (max-width: 890px) {
+    .left-scale {
+        height: 50vh;
+        top: 25%;
+        margin-left: 40px;
+    }
+    .left-shadow {
+        height: 50vh;
+        top: 25%;
+        margin-left: 50px;
+    }
+    .right-scale {
+        height: 50vh;
+        top: 25%;
+        margin-right: 40px;
+    }
+    .right-shadow {
+        height: 50vh;
+        top: 25%;
+        margin-right: 50px;
+    }
+    .right-percentage {
+        right: 100px;
+        top: 50%;
+        margin-top: -20px;
+    }
+    .left-percentage {
+        height: 40px;
+        left: 100px;
+        top: 50%;
+        margin-top: -20px;
+    }
+}
+@media (max-width: 500px) {
+    .left-scale {
+        height: 30vh;
+        top: 35%;
+        margin-left: 10px;
+    }
+    .left-shadow {
+        height: 30vh;
+        top: 35%;
+        margin-left: 20px;
+    }
+    .right-scale {
+        height: 30vh;
+        top: 35%;
+        margin-right: 10px;
+    }
+    .right-shadow {
+        height: 30vh;
+        top: 35%;
+        margin-right: 20px;
+    }
+    .right-percentage {
+        height: 20px;
+        right: 40px;
+        top: 50%;
+        margin-top: -10px;
+        font-size: 18px;
+    }
+    .left-percentage {
+        height: 20px;
+        left: 40px;
+        top: 50%;
+        margin-top: -10px;
+        font-size: 18px;
+    }
+    .video-play__button{
+        width: 24px;
+        height: 24px;
+    }
 }
